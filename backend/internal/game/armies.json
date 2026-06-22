@@ -1,0 +1,286 @@
+{
+  "armies": {
+    "moloch": [
+      {
+        "card_id": "mol_hq",
+        "name": "Sztab Moloch",
+        "type": "HQ",
+        "base_hp": 20,
+        "initiative": [0],
+        "buffs": [
+          { "type": "RangedPower", "value": 1, "directions": [0, 1, 2, 3, 4, 5] }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "mol_cyborg",
+        "name": "Cyborg",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [2, 1],
+        "attacks": [
+          { "direction": 0, "type": "Ranged", "power": 1 }
+        ],
+        "count": 2
+      },
+      {
+        "card_id": "mol_bloker",
+        "name": "Bloker",
+        "type": "Soldier",
+        "base_hp": 2,
+        "initiative": [],
+        "armor": [0, 1, 2, 3, 4, 5],
+        "count": 2
+      },
+      {
+        "card_id": "mol_gauss",
+        "name": "Działko Gaussa",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [1],
+        "attacks": [
+          { "direction": 0, "type": "Ranged", "power": 1 }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "mol_officer",
+        "name": "Oficer",
+        "type": "Module",
+        "base_hp": 1,
+        "buffs": [
+          { "type": "MeleePower", "value": 1, "directions": [0, 1, 2, 3, 4, 5] }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "mol_battle",
+        "name": "Bitwa",
+        "type": "Instant",
+        "effect": "TriggerBattle",
+        "count": 4
+      },
+      {
+        "card_id": "mol_pushback",
+        "name": "Odepchnięcie",
+        "type": "Instant",
+        "effect": "Pushback",
+        "count": 5
+      },
+      {
+        "card_id": "mol_bomb",
+        "name": "Bomba",
+        "type": "Instant",
+        "effect": "Bomb",
+        "count": 1
+      }
+    ],
+    "borgo": [
+      {
+        "card_id": "bor_hq",
+        "name": "Sztab Borgo",
+        "type": "HQ",
+        "base_hp": 20,
+        "initiative": [0],
+        "buffs": [
+          { "type": "Initiative", "value": 1, "directions": [0, 1, 2, 3, 4, 5] }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "bor_mutek",
+        "name": "Mutek",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [2],
+        "attacks": [
+          { "direction": 0, "type": "Melee", "power": 1 },
+          { "direction": 1, "type": "Melee", "power": 1 }
+        ],
+        "count": 6
+      },
+      {
+        "card_id": "bor_sieciarz",
+        "name": "Sieciarz",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [2],
+        "nets": [0],
+        "count": 2
+      },
+      {
+        "card_id": "bor_zabojca",
+        "name": "Zabójca",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [3],
+        "attacks": [
+          { "direction": 0, "type": "Melee", "power": 1 }
+        ],
+        "count": 2
+      },
+      {
+        "card_id": "bor_battle",
+        "name": "Bitwa",
+        "type": "Instant",
+        "effect": "TriggerBattle",
+        "count": 6
+      },
+      {
+        "card_id": "bor_move",
+        "name": "Ruch",
+        "type": "Instant",
+        "effect": "Move",
+        "count": 4
+      },
+      {
+        "card_id": "bor_grenade",
+        "name": "Granat",
+        "type": "Instant",
+        "effect": "Grenade",
+        "count": 1
+      }
+    ],
+    "posterunek": [
+      {
+        "card_id": "post_hq",
+        "name": "Sztab Posterunek",
+        "type": "HQ",
+        "base_hp": 20,
+        "initiative": [0],
+        "buffs": [
+          { "type": "DoubleAction", "value": 1, "directions": [0, 1, 2, 3, 4, 5] }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "post_komandos",
+        "name": "Komandos",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [3],
+        "attacks": [
+          { "direction": 0, "type": "Ranged", "power": 1 }
+        ],
+        "count": 5
+      },
+      {
+        "card_id": "post_likwidator",
+        "name": "Likwidator",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [2, 1],
+        "attacks": [
+          { "direction": 0, "type": "Ranged", "power": 1 }
+        ],
+        "count": 2
+      },
+      {
+        "card_id": "post_saboteur",
+        "name": "Dywersant",
+        "type": "Module",
+        "base_hp": 1,
+        "buffs": [
+          { "type": "Initiative", "value": -1, "directions": [0] }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "post_battle",
+        "name": "Bitwa",
+        "type": "Instant",
+        "effect": "TriggerBattle",
+        "count": 6
+      },
+      {
+        "card_id": "post_move",
+        "name": "Ruch",
+        "type": "Instant",
+        "effect": "Move",
+        "count": 7
+      },
+      {
+        "card_id": "post_sniper",
+        "name": "Snajper",
+        "type": "Instant",
+        "effect": "Sniper",
+        "count": 1
+      }
+    ],
+    "hegemonia": [
+      {
+        "card_id": "heg_hq",
+        "name": "Sztab Hegemonia",
+        "type": "HQ",
+        "base_hp": 20,
+        "initiative": [0],
+        "buffs": [
+          { "type": "MeleePower", "value": 1, "directions": [0, 1, 2, 3, 4, 5] }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "heg_ganger",
+        "name": "Ganger",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [2],
+        "attacks": [
+          { "direction": 0, "type": "Melee", "power": 1 }
+        ],
+        "count": 4
+      },
+      {
+        "card_id": "heg_gladiator",
+        "name": "Gladiator",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [1],
+        "attacks": [
+          { "direction": 0, "type": "Melee", "power": 1 }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "heg_super_sieciarz",
+        "name": "Super Sieciarz",
+        "type": "Soldier",
+        "base_hp": 1,
+        "initiative": [2],
+        "nets": [0, 1, 5],
+        "count": 1
+      },
+      {
+        "card_id": "heg_boss",
+        "name": "Boss",
+        "type": "Module",
+        "base_hp": 1,
+        "buffs": [
+          { "type": "MeleePower", "value": 1, "directions": [0, 1, 2, 3, 4, 5] }
+        ],
+        "count": 1
+      },
+      {
+        "card_id": "heg_battle",
+        "name": "Bitwa",
+        "type": "Instant",
+        "effect": "TriggerBattle",
+        "count": 5
+      },
+      {
+        "card_id": "heg_move",
+        "name": "Ruch",
+        "type": "Instant",
+        "effect": "Move",
+        "count": 3
+      },
+      {
+        "card_id": "heg_pushback",
+        "name": "Odepchnięcie",
+        "type": "Instant",
+        "effect": "Pushback",
+        "count": 2
+      }
+    ]
+  }
+}
