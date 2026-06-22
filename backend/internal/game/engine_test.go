@@ -118,6 +118,18 @@ func TestEngineHQPlacementAndTurnFlow(t *testing.T) {
 	}
 
 	// Player 1 attempts to play a tile while in DiscardMandatory phase -> should fail
+	// Ensure Hand[0] is a Soldier so it doesn't fail on "cannot place instant tile" validation
+	state.Players[p1].Hand[0] = &models.TileInstance{
+		InstanceID: "test-soldier-1",
+		Blueprint: models.StaticTileDef{
+			CardID: "bor_mutek",
+			Name:   "Mutek",
+			Type:   models.TileSoldier,
+			BaseHP: 1,
+		},
+		OwnerID:   p1,
+		CurrentHP: 1,
+	}
 	playTileID := state.Players[p1].Hand[0].InstanceID
 	err = engine.PlayTile(p1, playTileID, Hex{Q: -1, R: 0}, 0)
 	if err == nil {
@@ -139,6 +151,17 @@ func TestEngineHQPlacementAndTurnFlow(t *testing.T) {
 	}
 
 	// Player 1 plays a tile successfully now that mandatory discard is completed
+	state.Players[p1].Hand[0] = &models.TileInstance{
+		InstanceID: "test-soldier-2",
+		Blueprint: models.StaticTileDef{
+			CardID: "bor_mutek",
+			Name:   "Mutek",
+			Type:   models.TileSoldier,
+			BaseHP: 1,
+		},
+		OwnerID:   p1,
+		CurrentHP: 1,
+	}
 	playTileID2 := state.Players[p1].Hand[0].InstanceID
 	err = engine.PlayTile(p1, playTileID2, Hex{Q: -1, R: 0}, 0)
 	if err != nil {

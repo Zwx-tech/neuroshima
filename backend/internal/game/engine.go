@@ -283,9 +283,7 @@ func (e *Engine) UpdateTopology() {
 	// Stub for Task 4.2 (topological pass)
 }
 
-func (e *Engine) ResolveBattle() {
-	// Stub for Task 1.6 (battle resolver)
-}
+
 
 func shuffleDeck(deck []*models.TileInstance) {
 	n := len(deck)
