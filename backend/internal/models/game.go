@@ -105,11 +105,12 @@ const (
 
 // GameState is the root session model.
 type GameState struct {
-	GameID       string                `json:"game_id"`
-	ActivePlayer string                `json:"active_player"`
-	TurnNumber   int                   `json:"turn_number"`
-	Phase        GamePhase             `json:"phase"`
-	Board        map[Hex]*TileInstance `json:"board"`
-	Players      map[string]*Player    `json:"players"`
-	Winner       string                `json:"winner,omitempty"`
+	GameID         string                `json:"game_id"`
+	ActivePlayer   string                `json:"active_player"`
+	StartingPlayer string                `json:"starting_player"`
+	TurnNumber     int                   `json:"turn_number"`
+	Phase          GamePhase             `json:"phase"`
+	Board          map[Hex]*TileInstance `json:"board"`
+	Players        map[string]*Player    `json:"players"`
+	Winner         string                `json:"winner,omitempty"`
 }
